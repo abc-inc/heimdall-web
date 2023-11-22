@@ -1,0 +1,51 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+
+title = "Heimdall"
+copyright = "{year}"
+
+## -----------------------------------------------
+## Publish
+## -----------------------------------------------
+
+relativeURLs = "true"
+#canonifyURLs = "true"
+
+# Local
+baseURL = "/"
+publishDir = "public"
+
+# Remote
+#baseURL = "https://caressofsteel.github.io/demos/hugo/hugo-story/"
+#publishDir = "//centos/sites/hugodev/hugostory/"
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+
+disableKinds = ["taxonomy", "term"]
+# googleAnalytics = "G-XXXXXXXXXX"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+  logo = "images/banner.jpg"
+  favicon = false
+
+[Params.social]
+  github = "https://github.com/caressofsteel/"
+  twitter = "https://twitter.com/caressofsteel_"
+  email = "caressofsteel@protonmail.com"
+
+[Params.asset]
+  fontawesome_css = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"]
+  fontawesome_js = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"]
+  heimdall_css = ["css/heimdall.css"]

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ end }}
+<!DOCTYPE HTML>
+<html>
+
+{{ partial "head" . }}
+
+<body>
+
+  <div class="content">
+      <!-- Wrapper -->
+      <div id="wrapper" class="divided">
+          {{- block "main" . }}{{- end }}
+          <!-- Wrapper -->
+      </div>
+  </div>
+
+</body>
+</html>

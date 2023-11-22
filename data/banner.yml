@@ -1,0 +1,9 @@
+####################### Banner #########################
+style: "style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right"
+title : "HEIMDALL"
+subtitle: "{productivity, compliance} - choose two"
+content : Heimdall watches your CI/CD pipeline for violations of guidelines, policies and regulations, and prevents you from facing Ragnar&ouml;k... and&nbsp;even&nbsp;audit findings.
+button:
+  label : "Learn more"
+  link : "/manual/"
+image : "images/4994239_orig.jpg"

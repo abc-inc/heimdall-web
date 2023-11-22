@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "CMU Serif";
+    src: url('../webfonts/cmunrm.otf');
+}
+
+@font-face {
+    font-family: "CMU Typewriter";
+    src: url('../webfonts/cmuntt.otf');
+}
+
+body {
+    font-family: 'CMU Serif', Garamond, serif;
+}
+
+p.major {
+    font-family: 'CMU Serif', 'Kalam', 'Architects Daughter', serif;
+}
+
+.content p,
+.inner p {
+    text-align: justify;
+}
+
+a.button,
+button,
+input,
+select,
+textarea {
+    font-family: Garamond, serif;
+    background-color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: normal !important;
+}
+
+h1,
+.norse {
+    font-family: Garamond, serif;
+    word-spacing: normal;
+}
+
+main h2, main h3, main h4 {
+    color: #006699 !important;
+}
+
+article header h2 {
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.cuneiform {
+    font-family: Noatun, serif;
+}
+
+.icon.style2 svg {
+    height: 3rem;
+    width: 3rem;
+}
+
+.index > .submenu {
+    padding: 1rem 0 1rem !important;
+}
+
+.wrapper.style1 > .inner {
+    padding-left: 12rem !important;
+    padding-right: 10rem !important;
+}
+
+div.highlight {
+    width: 100%;
+}
+
+div.highlight + div.highlight {
+    margin-top: -2rem;
+}
+
+code, code span {
+    font-family: "CMU Typewriter", monospace;
+}
+
+image {
+    text-align: center;
+}
+
+i.fa-20xl:before,
+i.fa-20xl {
+    font-size: 4em !important;
+    line-height: inherit;
+    margin: auto;
+    text-align: center;
+    vertical-align: bottom;
+
+    display: inline-block;
+    position: relative;
+}
+
+ul.menu-list, ul.menu-list li {
+    list-style: none !important;
+}
+
+ul.menu-list a {
+    text-decoration: none !important;
+}
+
+ul.menu-list a:hover {
+    text-decoration: underline !important;
+}
+
+@media screen and (max-width: 1160px) {
+    .wrapper.style1 > .inner {
+        margin-left: 5rem !important;
+        margin-right: 0 !important;
+        padding-right: 6rem !important;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #menu {
+        display: none;
+    }
+
+    .wrapper.style1 > .inner {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+        padding: 0 0 !important;
+    }
+}

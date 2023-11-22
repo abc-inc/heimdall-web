@@ -1,0 +1,40 @@
+<head>
+	<title>{{ .Site.Title }}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	{{ if .Site.Params.favicon }}
+	{{ partial "favicon" }}
+	{{ end }}
+	
+	<!-- CSS -->
+	{{ if .Site.IsServer }}
+	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" false) }}
+	<link rel="stylesheet" href="{{ replace ($style).RelPermalink "/heimdall-web" "" }}">
+	{{ else }}
+	{{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "scss/main.scss" . | toCSS (dict "targetPath" "css/main.css" "enableSourceMap" false) }}
+	<link rel="stylesheet" href="{{ replace ($style | minify).RelPermalink "/heimdall-web" "" }}">
+	{{ end }}
+	{{ if .Site.IsServer }}
+	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
+	<noscript><link rel="stylesheet" href="{{ replace ($noscript).RelPermalink "/heimdall-web" "" }}"/></noscript>
+	{{ else }}
+	{{ $noscript := resources.Get "sass/noscript.scss" | resources.ExecuteAsTemplate "noscript.scss" . | toCSS (dict "targetPath" "css/noscript.css" "enableSourceMap" false) }}
+	<noscript><link rel="stylesheet" href="{{ replace ($noscript | minify).RelPermalink "/heimdall-web" "" }}" /></noscript>
+	{{end}}
+
+	<!-- FontAwesome CSS -->
+	<script type="text/javascript">
+		// Notice how this gets configured before we load Font Awesome
+		window.FontAwesomeConfig = { autoReplaceSvg: false }
+	</script>
+	{{ range .Site.Params.asset.fontawesome_css -}}
+		<link rel="stylesheet" href="{{ . | absURL }}">
+	{{- end }}
+
+	{{ range .Site.Params.asset.heimdall_css -}}
+	<link rel="stylesheet" href="{{ . | absURL }}">
+	{{- end }}
+
+</head>

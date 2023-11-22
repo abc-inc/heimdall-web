@@ -1,0 +1,22 @@
+<!-- Footer -->
+<footer class="wrapper style1 align-center">
+    <div class="inner">
+        <!--ul class="icons">
+            {{ with .Site.Params.social.github }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>{{end}}
+            {{ with .Site.Params.social.twitter }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>{{end}}
+            {{ with .Site.Params.social.instagram }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>{{end}}
+            {{ with .Site.Params.social.linkedin }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>{{end}}
+            {{ with .Site.Params.social.email }}<li><a target="_blank" href="mailto:{{.}}" class="fav icon style2 fa-envelope"><span class="label">Email</span></a></li>{{end}}
+        </ul-->
+        <p>Theme: Hugo Story &copy; 2020 <a target="_blank" href="https://github.com/caressofsteel/">CaressOfSteel</a><span class="footerspacer icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M284.3 11.7c-15.6-15.6-40.9-15.6-56.6 0l-216 216c-15.6 15.6-15.6 40.9 0 56.6l216 216c15.6 15.6 40.9 15.6 56.6 0l216-216c15.6-15.6 15.6-40.9 0-56.6l-216-216z"/></svg>
+        </span>
+            Ported from <a target="_blank" href="https://html5up.net/uploads/demos/story/">Story</a> by HTML5UP
+        </p>
+</div>
+</footer>
+
+<!-- FontAwesome JS -->
+{{ range .Site.Params.asset.fontawesome_js -}}
+    <script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}
